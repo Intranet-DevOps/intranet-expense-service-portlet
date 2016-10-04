@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-lazy="false" auto-import="false">
+	<import class="sg.com.para.intranet.expense.services.model.Expense" />
+	<class name="sg.com.para.intranet.expense.services.model.impl.ExpenseImpl" table="intranet_expense">
+		<cache usage="read-write" />
+		<id name="expenseId" type="int">
+			<generator class="assigned" />
+		</id>
+		<property name="employeeScreenName" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="logDate" type="org.hibernate.type.TimestampType" />
+		<property name="amount" type="com.liferay.portal.dao.orm.hibernate.DoubleType" />
+		<property name="remarks" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="status" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="projectCode" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approvedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="approvedDate" type="org.hibernate.type.TimestampType" />
+		<property name="processedBy" type="com.liferay.portal.dao.orm.hibernate.StringType" />
+		<property name="processedDate" type="org.hibernate.type.TimestampType" />
+	</class>
+</hibernate-mapping>

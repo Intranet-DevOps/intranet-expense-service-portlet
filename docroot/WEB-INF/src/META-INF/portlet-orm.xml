@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.0" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/orm http://java.sun.com/xml/ns/persistence/orm_1_0.xsd">
+	<persistence-unit-metadata>
+		<xml-mapping-metadata-complete/>
+		<persistence-unit-defaults>
+			<access>PROPERTY</access>
+		</persistence-unit-defaults>
+	</persistence-unit-metadata>
+	<mapped-superclass class="sg.com.para.intranet.expense.services.model.impl.ExpenseModelImpl">
+		<attributes>
+			<id name="expenseId" />
+			<basic name="employeeScreenName" />
+			<basic name="logDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="amount" />
+			<basic name="remarks" />
+			<basic name="status" />
+			<basic name="projectCode" />
+			<basic name="approvedBy" />
+			<basic name="approvedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<basic name="processedBy" />
+			<basic name="processedDate">
+				<temporal>TIMESTAMP</temporal>
+			</basic>
+			<transient name="modelAttributes" />
+			<transient name="primaryKey" />
+			<transient name="primaryKeyObj" />
+		</attributes>
+	</mapped-superclass>
+	<entity class="sg.com.para.intranet.expense.services.model.impl.ExpenseImpl" name="Expense">
+		<table name="intranet_expense" />
+		<attributes />
+	</entity>
+</entity-mappings>

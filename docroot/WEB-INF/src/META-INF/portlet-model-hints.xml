@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="sg.com.para.intranet.expense.services.model.Expense">
+		<field name="expenseId" type="int" />
+		<field name="employeeScreenName" type="String" />
+		<field name="logDate" type="Date" />
+		<field name="amount" type="double" />
+		<field name="remarks" type="String" />
+		<field name="status" type="String" />
+		<field name="projectCode" type="String" />
+		<field name="approvedBy" type="String" />
+		<field name="approvedDate" type="Date" />
+		<field name="processedBy" type="String" />
+		<field name="processedDate" type="Date" />
+	</model>
+</model-hints>
